@@ -15,6 +15,10 @@
             {% for media in item.media_content %}
                 <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
             {% endfor %}
+            <p>Descripción: {{ item.description }}</p>
+            <p>Fecha de publicación: {{ item.published }}</p>
+            <p>Categoría: {{ item.category }}</p>
+            <p>Última actualización: {{ item.modified }}</p>
         </p>
     {% endfor %}
 </body>

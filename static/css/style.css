@@ -1,8 +1,12 @@
 body {
-    background-color: #0095ab;
+    background-color: #e5c7ff;
 }
 
 img {
-    width: 400px;
+    width: 400px !important;
     height: auto;
+    border-radius: 15px !important;
+}
+.carousel{
+    width: 400px !important;
 }

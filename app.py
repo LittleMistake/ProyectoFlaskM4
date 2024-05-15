@@ -84,11 +84,11 @@ def lavanguardia(seccio):
     return render_template("lavanguardia.html", rss = rss)
 
 def get_rss_lavanguardia(seccio):
-    # MODE REMOT: versió on descarrega l'XML de la web
-    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    #MODE REMOT: versió on descarrega l'XML de la web
+    xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
     
     # MODE LOCAL: versió que fa servir l'XML descarregat
-    xml = f"./rss/lavanguardia/{seccio}.xml"
+    #xml = f"./rss/lavanguardia/{seccio}.xml"
     
     rss = feedparser.parse(xml)
     return rss
