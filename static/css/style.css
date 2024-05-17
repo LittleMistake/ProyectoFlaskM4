@@ -1,12 +1,22 @@
 body {
-    background-color: #e5c7ff;
+    background-color: #e0eeff;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
-img {
-    width: 400px !important;
+.carousel-inner > .carousel-item > img {
+   width: 500px !important;
     height: auto;
     border-radius: 15px !important;
+    margin: auto;
+ }
+.img{
+    height: auto;
+    width: auto;
+    border-radius: 15px !important;
 }
-.carousel{
-    width: 400px !important;
+.titulo{
+    display: flex;
+    justify-content: center;
 }

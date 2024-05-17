@@ -7,12 +7,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Diaris!</title>
-
-
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<h3>Mira les noticies de La Vanguardia:</h3>
     <nav class="navbar navbar-expand-sm bg-light">
         <div class="container-fluid">
             <ul class="navbar-nav">
@@ -22,20 +19,58 @@
                 <li class="nav-item"><a class="nav-link" href="/lavanguardia/cultura">Cultura</a></li>
                 <li class="nav-item"><a class="nav-link" href="/lavanguardia/mascotas">Mascotas</a></li>
             </ul>
+            <img src="static/img/vanguardia-logo.png" height="60px">
         </div>
     </nav>
-    <div id="demo" class="carousel slide" data-bs-ride="carousel" >
-    <div class="mx-auto d-block" class="carousel-inner" class="carousel">
-        <div class="carousel-item active">
-          <img src="/static/img/altura.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="/static/img/rrata.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="/static/img/putellas.jpg" class="d-block w-100">
-        </div>
+    <br>
+    <h2 class="titulo">Noticias de actualidad</h2>
+    <br>
+    <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    <div class="carousel-item active">
+      <img src="static/img/lydia.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Deportes</h5>
+        <p>Noticias actuales sobre deportes</p>
+      </div>
     </div>
+    <div class="carousel-item">
+      <img src="static/img/puigdemont-pajaro.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Política</h5>
+        <p>Noticias actuales sobre política</p>
+      </div>
     </div>
+    <div class="carousel-item">
+      <img src="static/img/rrata.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Mascotas</h5>
+        <p>Noticias actuales sobre mascotas</p>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="static/img/palestine.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Vida</h5>
+        <p>Noticias actuales sobre la vida</p>
+      </div>
+    </div>
+      <div class="carousel-item">
+      <img src="static/img/san-isidro.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+        <h5>Cultura</h5>
+        <p>Noticias actuales sobre cultura</p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
