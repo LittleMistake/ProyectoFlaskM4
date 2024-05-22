@@ -40,4 +40,72 @@ También podemos acceder a los items de cada elemento con las palabras clave lin
 Para usar nuestra aplicación deberemos iniciar flask, que nos proporcionará un enlace que deberemos pinchar. A partir de ahí se nos mostrará nuestro index.html, nuestra página principal de la aplicación. Nosotros podremos usar la aplicación tanto en remoto (con la función de auto refresco), como en local. Esto último lo hacemos modificando el index.html para añadir también nuestra nueva sección y el enlace al XML que habremos descargado en nuestro ordenador y tendremos guardado en nuetra carpeta del proyecto.
 
 
-# TBC (To Be Continued)
+## Cómo utilizar Bootstrap
+En este proyecto hemos utilizado el framework bootstrap, que podemos usar de manera local si descargamos las librerías de utilidades, aunque yo he preferido usar los CDN, o sea, los links de la red de distribución de contenido que hace que podamos usar bootstrap de manera remota. Esto tiene un inconveniente, puesto que si utilizamos la aplicación en modo local y sin internet, no podremos usar bootstrap. Yo he optado por esta opción en base al tiempo del que yo disponía.
+
+Bootstrap funciona mediante clases, en las que puedes especificar cómo quieres que se comporte el objeto al que le estás añadiendo las clases. Bootstrap detecta las clases de manera automáticamente y aplica un css "pre-hecho" a la misma.
+
+Bootstrap cuenta con una distribución de columnas que podemos manejar y editar a nuestro gusto en base a si vamos a ver el contenido en una pantalla más o menos grande. Cuando usamos las columnas, no tenemos que hacer 12 columnas de manera obligatoria, sino que podemos repartir el espacio entre las columnas que queramos especificando el tamaño de pantalla y las columnas que queremos. Por ejemplo:
+
+```col-xs-12```
+
+Esto signficará que nuestra columna ocupará todo el espacio disponible en una pantalla extra pequeña, o sea, que en una pantalla muy pequeña sólo veremos una columna. 
+Podemos "amontonar" las especificaciones de columnas para diferentes tipos de pantalla, es decir:
+
+``col-sm-6 col-md-4 col-lg-3``
+
+Esto significa que en una pantalla pequeña el espacio se dividirá en dos columnas que ocuparás 6 "minicolumnas" de bootstrap, en una pantalla mediana habrá 3 columnas porque cada columna ocupará 4 "minicolumnas" y en una pantalla grande tendremos 4 columnas porque cada columna ocupará 3 "minicolumnas".
+
+En la documentación oficial de Bootstrap tenemos muchos ejempolos de las funcionalidades que nos ofrece. Para más información: 
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+## Editar los valores por defecto de Bootstrap
+
+Existen varias maneras de sobreescribir los valores por defecto de boostrap, uno de ellos es editar el archivo sass y recompilarlo enun archivo css. Existe una extensión de visual studio que hace esta tarea más fácil. En mi caso no he optado por esta opción ya que consideré que con el tiempo y disponibilidad que tenía no podría hacerlo de la manera "correcta".
+Otra forma es, en tu propio archivo css marcar una propiedad como "importante", por ejemplo:
+
+```Font-family: 'Roboto', sans-serif !important;```
+
+Esta no es la mejor manera, pero es más "sencilla" si no tenemos demasiado tiempo.
+En mi caso esa forma no estaba funcionando del todo, así que opté por la última, que no es recomendada si vas a publicar una aplicación de manera oficial, pero en entorno escolar considero que se puede usar sin más problema. 
+La última opción es sobreescribir los valores de las variables de bootstrap declarando los valores en root en el archivo css y usando el nombre de valor para cambiar el contenido. 
+Es decir, en la cabecera de tu archivo css escribres:
+
+``` :root{*nombre del valor a cambiar*} ```
+
+Por ejemplo, yo quería cambiar la fuente de la aplicación, pero la opción de marcar como importante por lo que utilicé la opción de sobreescribir en la raiz el tipo de fuente con `` --bs-body-font-family: 'Inconsolata', sans-serif;``. También importé la fuente desde google fonts para que funcionase.
+
+## Cosas extra
+
+Una de las cosas que se pedían era hacer un carousel. Debido al layout que yo quería utilizar, no podía poner los carrousels tal cual porque no estaban respondiendo bien a la ubicación que les estaba dando, al igual que las fotos de las noticias.
+Para solucionar esto he usado las cartas de bootstrap, que me han permitido meter dentro las imágenes/carrousel sin problemas más allá de que se ve un poco la card por debajo ya que tengo las esquinas de las imágenes redondeadas. 
+
+Para añadir iconos intenté usar iconos de Font-awesome como se recomendaba, pero no me estaban funcionando, no sé si por la versión (probé con las dos), así que finalmente decidí utilizar los iconos en formato png de flaticon, por lo que a continuación pondré los respectivos créditos:
+
+<a href="https://www.flaticon.com/free-icons/bee" title="bee icons">Bee icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/war" title="war icons">War icons created by noomtah - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/politics" title="politics icons">Politics icons created by Uniconlabs - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/gym" title="gym icons">Gym icons created by dDara - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/theatre" title="theatre icons">Theatre icons created by Freepik - Flaticon</a>
+
+Para tener un poco más claro el uso de bootstrap he visto varios videos:
+
+Video sobre sómo añadir bootstrap:
+https://www.youtube.com/watch?v=qeS3rOa8voU
+
+Video sobre el sistema de grid:
+https://www.youtube.com/watch?v=qeS3rOa8voU
+
+Video sobre las clases de Bootstrap:
+https://www.youtube.com/watch?v=nCeHeA7IsvU&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=5
+
+Video sobre las cards:
+https://www.youtube.com/watch?v=NRoET8-8cbw&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=10
+
+Video sobre acordeones:
+https://www.youtube.com/watch?v=cVThXv6hYW0&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=11
+Tenía intención de hacer acordeones pero me quedé sin tiempo solucionando otros problemas, así que al final no los añadí.
