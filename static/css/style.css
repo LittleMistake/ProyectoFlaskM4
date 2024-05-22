@@ -1,22 +1,42 @@
+:root{
+ --bs-body-font-family: 'Inconsolata', sans-serif;
+    --bs-light-rgb: 252, 230, 255;
+}
 body {
-    background-color: #e0eeff;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background-color: #ffd0f2;
 }
 
 .carousel-inner > .carousel-item > img {
    width: 500px !important;
     height: auto;
+    max-height: 260px;
     border-radius: 15px !important;
     margin: auto;
  }
+
+.icono{
+    width: 20px;
+}
+
 .img{
-    height: auto;
     width: auto;
-    border-radius: 15px !important;
+    border-radius: 20px !important;
 }
 .titulo{
     display: flex;
     justify-content: center;
+}
+.imagen-noticia{
+    max-height: 150px;
+    border-radius: 10px;
+}
+card{
+    justify-content: center;
+}
+.cabecera{
+    display: flex;
+}
+.imagen-logo{
+    flex: 1;
+    margin-left: 50px;
 }
