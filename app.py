@@ -89,6 +89,5 @@ def get_rss_lavanguardia(seccio):
     
     # MODE LOCAL: versió que fa servir l'XML descarregat
     #xml = f"./rss/lavanguardia/{seccio}.xml"
-    
     rss = feedparser.parse(xml)
     return rss
