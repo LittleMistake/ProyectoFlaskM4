@@ -31,13 +31,13 @@ Una vez tengamos esto necesitaremos crear un nuevo nodo <item>, que cambiará ca
 
 ## RSS y feedparser
 
-Si no queremos tener que escribir cada detalle del xml del RSS, podemos utilizar feedparser, que leerá el RSS de la página que queramos (la vanguardia en este caso) y nos sacrá la información que necesitemos. Podemos acceder a los elementos del canal (<channel>) que se encuentran en d.entries (es una lista).
-También podemos acceder a los items de cada elemento con las palabras clave linmk, description o published. 
+Si no queremos tener que escribir cada detalle del xml del RSS, podemos utilizar feedparser, que leerá el RSS de la página que queramos (la vanguardia en este caso) y nos sacará la información que necesitemos. Podemos acceder a los elementos del canal (<channel>) que se encuentran en d.entries (es una lista).
+También podemos acceder a los items de cada elemento con las palabras clave link, description o published. 
 
 
 ## Cómo utilizar nuestra aplicación
 
-Para usar nuestra aplicación deberemos iniciar flask, que nos proporcionará un enlace que deberemos pinchar. A partir de ahí se nos mostrará nuestro index.html, nuestra página principal de la aplicación. Nosotros podremos usar la aplicación tanto en remoto (con la función de auto refresco), como en local. Esto último lo hacemos modificando el index.html para añadir también nuestra nueva sección y el enlace al XML que habremos descargado en nuestro ordenador y tendremos guardado en nuetra carpeta del proyecto.
+Para usar nuestra aplicación deberemos iniciar flask, que nos proporcionará un enlace que deberemos pinchar. A partir de ahí se nos mostrará nuestro index.html, nuestra página principal de la aplicación. Nosotros podremos usar la aplicación tanto en remoto (con la función de auto refresco, se puede cambiar de modo comentando/descomentando esa parte en el código en el archivo app.py, lo podemos encontrar al final del archivo), como en local. Esto último lo hacemos modificando el index.html para añadir también nuestra nueva sección y el enlace al XML que habremos descargado en nuestro ordenador y tendremos guardado en nuetra carpeta del proyecto.
 
 
 ## Cómo utilizar Bootstrap
@@ -46,7 +46,7 @@ En este proyecto hemos utilizado el framework bootstrap, que podemos usar de man
 Bootstrap funciona mediante clases, en las que puedes especificar cómo quieres que se comporte el objeto al que le estás añadiendo las clases. Bootstrap detecta las clases de manera automáticamente y aplica un css "pre-hecho" a la misma.
 
 Bootstrap cuenta con una distribución de columnas que podemos manejar y editar a nuestro gusto en base a si vamos a ver el contenido en una pantalla más o menos grande. Cuando usamos las columnas, no tenemos que hacer 12 columnas de manera obligatoria, sino que podemos repartir el espacio entre las columnas que queramos especificando el tamaño de pantalla y las columnas que queremos. Por ejemplo:
-
+ 
 ```col-xs-12```
 
 Esto signficará que nuestra columna ocupará todo el espacio disponible en una pantalla extra pequeña, o sea, que en una pantalla muy pequeña sólo veremos una columna. 
@@ -109,3 +109,6 @@ https://www.youtube.com/watch?v=NRoET8-8cbw&list=PL4cUxeGkcC9joIM91nLzd_qaH_Aimm
 Video sobre acordeones:
 https://www.youtube.com/watch?v=cVThXv6hYW0&list=PL4cUxeGkcC9joIM91nLzd_qaH_AimmdAR&index=11
 Tenía intención de hacer acordeones pero me quedé sin tiempo solucionando otros problemas, así que al final no los añadí.
+
+## Trabajar con amor
+Le he puesto mucho cariño Juan, espero que se note ;)
