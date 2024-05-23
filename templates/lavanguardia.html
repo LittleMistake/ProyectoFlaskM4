@@ -16,10 +16,17 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="../static/img/iconos/up-arrow.png" class="icono-subir">
+</button>
 <nav>
     <div class="container-fluid" style="text-align: center">
         <h1>La Vanguardia - <small>{{ rss.feed.title }}</small></h1>
-        <img src="{{ rss.feed.image.url }}" alt="{{ rss.feed.image.description }}"/>
+        <img src="{{ rss.feed.image.url }}" alt="{{ rss.feed.image.description }}"/><br><br>
+        <a href="http://127.0.0.1:5000">
+            <button>Inicio</button>
+        </a>
     </div>
 </nav>
 <br>
@@ -28,11 +35,10 @@
         {% for item in rss.entries %}
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <p>
-
                     {% for media in item.media_content %}
                         <p class="parrafo-imagen">
                         <div class="card">
-                            <img class="imagen-noticia" class="p-1" src="{{ media.url }}" alt="{{ item.title }}"/>
+                            <img class=" img-fluid imagen-noticia"  data-target="#myModal" class="p-1" src="{{ media.url }}" alt="{{ item.title }}" data-bigimage="{{ media.url }}" data-toggle="modal"/>
                         </div>
                         </p>
                     {% endfor %}
@@ -45,7 +51,51 @@
             </div>
         {% endfor %}
     </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-body">
+
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+                <img src="//media.tenor.com/images/556e9ff845b7dd0c62dcdbbb00babb4b/tenor.gif" alt="" id="image" class="img-fluid">
+
+
+
+      </div>
+
+    </div>
+  </div>
 </div>
 
+
+
+</div>
+
+</div>
+<script>
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
 </body>
 </html>
